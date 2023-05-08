@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/3d-fluency/100/000000/money.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <h1 style="color: #4b70e2; text-shadow: 1px 1px 2px #203678">
+      EXPENSE TRACKER & MANAGER
+    </h1>
+
+    <br />
+    <form action="" id="form">
+      <div class="input-group">
+        <input type="text" class="input" placeholder=" " id="des" required />
+        <label class="placeholder">Description</label>
+      </div>
+      <div class="input-group">
+        <input type="number" class="input" placeholder=" " id="amt" required />
+        <label class="placeholder">Amount</label>
+      </div>
+      <div class="input-group">
+        <input type="date" class="input" placeholder=" " id="date" required />
+        <label class="placeholder"></label>
+      </div>
+
+      <button type="submit">Add</button>
+      <button type="reset" class="resetBtn">Clear All</button>
+    </form>
+
+    <div id="root"></div>
+  </body>
+</html>
