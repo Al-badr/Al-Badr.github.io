@@ -5,7 +5,7 @@ if (JSON.parse(window.localStorage.getItem('expenseList')) !== null) {
 	initialState = JSON.parse(window.localStorage.getItem('expenseList'))
 }
 
-function expense(desc, amt, date,bud) {
+function expense(desc, amt, date, bud) {
   return (expenseObj = {
     description: desc,
     amount: amt,
@@ -41,12 +41,12 @@ form.addEventListener("reset",(e)=>{
   
 })
 
-/* function budget(bud) {
-  let newBud = document.createElement("h3")
-  for (let i = 0; i < expenseList.length; i++) {
-    newBud.innerText=budget- expenseList[i].amount;
+// function budget(bud) {
+//   let newBud = document.createElement("h3")
+//   for (let i = 0; i < expenseList.length; i++) {
+//     newBud.innerText=budget- expenseList[i].amount;
   
-}} */
+// }} 
 
 function addExpense() {
   let div = document.createElement("div");
