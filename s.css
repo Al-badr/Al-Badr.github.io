@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+	margin-top: 30px;
+	background: white;
+}
+form {
+	display: flex;
+	flex-direction: row;
+	width: 90vw;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+/* form input {????
+	margin: 5px;
+	height: 35px;
+	text-indent: 5px;
+} */
+/* form button {
+	height: 35px;
+	border: none;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	margin: 10px;
+} ???????????????????????*/
+
+
+
+
+#root {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin: 20px;
+	width: 90vw;
+	overflow-wrap: normal;
+	flex-wrap: wrap;
+}
+
+.input-group {
+	position: relative;
+	margin: 10px;
+}
+
+.input {
+	padding: 10px;
+
+	background: white;
+
+	border-radius: 5px;
+  color: black;
+	outline: none;
+
+	
+
+	border: 5px solid black;
+
+}
+
+.placeholder {
+	position: absolute;
+
+	top: 10px;
+
+	left: 8px;
+
+	font-size: 14px;
+
+	padding: 0px 5px;
+
+	color: #0da2ff;
+
+	transition: 0.3s;
+
+	pointer-events: none;
+  
+}
+
+.input:focus + .placeholder,
+.input:not(:placeholder-shown) + .placeholder {
+	top: -10px;
+  color: #0da2ff;
+	background-color: #d3edf8;
+
+
+}
+
+input[type="text"]:focus {
+	background: #d3edf8;
+}
+input[type="text"]:active {
+	background: #d3edf8;
+}
+
+ button{
+	
+	border-radius: 5px;
+cursor: pointer;	
+font-weight: 700;
+	font-size: 14px;
+	letter-spacing: 1.15px;
+	background-color: #4b70e2;
+	color: #f9f9f9;
+	box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #f9f9f9;
+	border: none;
+	outline: none;
+  padding: 10px;
+  margin: 10px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #0da2ff;
+  cursor: pointer;
+}
+
+.resetBtn{
+  position: fixed;
+  top:10px;
+  right:10px;
+
+}
