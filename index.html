@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Expense Manager</title>
-    <script src="./index.js" defer></script>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <h1>PERSONAL EXPENSE MANAGER</h1>
+<head>
+  <meta charset="UTF-8" />
 
-    <br />
-    
-      <form action="" id="form">
-        <div class="input-group">
-          <!--mmmmm-->
-          <input type="number" class="input" placeholder="" id="bud" required />
-          <label class="placeholder">Budget</label>
-          <!--mmmmm-->
-          <input type="text" class="input" placeholder=" " id="des" required />
-          <label class="placeholder">Description</label>
-        </div>
-        <div class="input-group">
-          <input
-            type="number"
-            class="input"
-            placeholder=" "
-            id="amt"
-            required
-          />
-          <label class="placeholder">Amount</label>
-        </div>
-        <div class="input-group">
-          <input type="date" class="input" placeholder=" " id="date" required />
-          <label class="placeholder"></label>
-        </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Expense Manager</title>
+  <script src="./index.js" defer></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-        <button type="submit">Add</button>
-        <button type="reset" class="resetBtn">Clear All</button>
-      </form>
+<body>
+  <h1> PERSONAL EXPENSE MANAGER</h1>
 
-      
-    </form>
-    <div id="mainPage"></div>
-  </body>
+
+  <br />
+
+  <form action="" id="form">
+    <div class="input-group">
+
+      <label class="placeholder">Budget</label>
+      <input type="number" class="input" placeholder="" id="bud" required />
+    </div>
+    <div class="input-group">
+      <label class="placeholder">Description</label>
+      <input type="text" class="input" placeholder=" " id="des" required />
+
+    </div>
+
+    <div class="input-group">
+      <label class="placeholder">Amount</label>
+      <input type="number" class="input" placeholder=" " id="amt" required />
+</div>
+    <div class="input-group">
+      <label class="placeholder">Date</label>
+      <input type="date" class="input" placeholder=" " id="date" required />
+      <label class="placeholder"></label>
+    </div>
+
+    <button type="submit">Add</button>
+
+    <button type="reset" class="resetBtn">Clear All</button>
+  </form>
+
+
+  </form>
+  <div id="mainPage"></div>
+</body>
+
 </html>
