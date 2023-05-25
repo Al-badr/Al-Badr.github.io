@@ -12,7 +12,15 @@
 
 <body>
   <h1> PERSONAL EXPENSE MANAGER</h1>
-
+  <div class="input-group">
+  <label class="placeholder">Your budget is:  </label>
+  <input type="number" class="input" id="bal">
+  <input type="button" class="updateBtn" value="Update Balance" onclick="location.reload()">
+</div>
+<div>
+  <h4>Your Balance</h4>
+  <h1 id="balance">000</h1>
+</div>
 
   <br />
 
@@ -20,22 +28,27 @@
     <div class="input-group">
 
       <label class="placeholder">Budget</label>
-      <input type="number" class="input" placeholder="" id="bud" required />
+      <input value="999" type="number" class="input" placeholder="" id="bud" required />
     </div>
     <div class="input-group">
       <label class="placeholder">Description</label>
-      <input type="text" class="input" placeholder=" " id="des" required />
+      <input value="default" type="text" class="input" placeholder=" " id="des" required />
 
     </div>
 
     <div class="input-group">
       <label class="placeholder">Amount</label>
-      <input type="number" class="input" placeholder=" " id="amt" required />
+      <input value="100" type="number" class="input" placeholder=" " id="amt" required />
 </div>
     <div class="input-group">
       <label class="placeholder">Date</label>
-      <input type="date" class="input" placeholder=" " id="date" required />
+      <input value="2011-09-29" type="date" class="input" placeholder=" " id="date" required />
       <label class="placeholder"></label>
+    </div>
+
+    <div class="input-group">
+     
+      <input type="hidden" name="" id="hidden">
     </div>
 
     <button type="submit">Add</button>
@@ -46,6 +59,17 @@
 
   </form>
   <div id="mainPage"></div>
+  <table id="expenseTable" border="1">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Budget</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
 </body>
 
 </html>
