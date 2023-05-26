@@ -13,52 +13,52 @@
 
   <h1 class="title">PERSONAL EXPENSE MANAGER</h1>
 
-  <div class="input-group">
+  <div class="budInput-group">
     <label class="placeholder">Your budget is: </label>
-    <input type="number" class="input" id="bal" />
+    <input type="number" class="budInput" id="bal" />
     <input type="button" class="updateBtn" value="Update Balance" onclick="location.reload()" />
   </div>
+  <div class="cont1">
+    <h4>Available Balance:</h4>
 
-  <h4>Your Balance</h4>
+    <h1 id="balance">000</h1>
 
-  <h1 id="balance">000</h1>
+    <br />
 
-  <br />
+    <form action="" id="form">
+      <div class="input-group">
+        <label class="placeholder">Budget</label>
+        <input type="number" class="input" placeholder="" id="bud" required />
+      </div>
 
-  <form action="" id="form">
-    <div class="input-group">
-      <label class="placeholder">Budget</label>
-      <input value="999" type="number" class="input" placeholder="" id="bud" required />
-    </div>
+      <div class="input-group">
+        <label class="placeholder">Description</label>
+        <input type="text" class="input" placeholder=" " id="des" />
+      </div>
 
-    <div class="input-group">
-      <label class="placeholder">Description</label>
-      <input value="default" type="text" class="input" placeholder=" " id="des" required />
-    </div>
+      <div class="input-group">
+        <label class="placeholder">Amount</label>
+        <input type="number" class="input" placeholder=" " id="amt" required />
+      </div>
 
-    <div class="input-group">
-      <label class="placeholder">Amount</label>
-      <input value="100" type="number" class="input" placeholder=" " id="amt" required />
-    </div>
+      <div class="input-group">
+        <label class="placeholder">Date</label>
+        <input type="date" class="input" placeholder=" " id="date" required />
+        <label class="placeholder"></label>
+      </div>
 
-    <div class="input-group">
-      <label class="placeholder">Date</label>
-      <input value="2011-09-29" type="date" class="input" placeholder=" " id="date" required />
-      <label class="placeholder"></label>
-    </div>
+      <div class="input-group">
+        <input type="hidden" name="" id="hidden" />
+      </div>
 
-    <div class="input-group">
-      <input type="hidden" name="" id="hidden" />
-    </div>
+      <button type="submit" class="addBtn">Add</button>
+      <button type="reset" class="resetBtn">Clear All</button>
+    </form>
 
-    <button type="submit">Add</button>
-    <button type="reset" class="resetBtn">Clear All</button>
-  </form>
-
-
+  </div>
 
   <!-- <div id="mainPage"></div> -->
-
+  <!--                                                             backup
   <table id="expenseTable" border="1">
     <thead>
       <tr>
@@ -69,8 +69,43 @@
       </tr>
     </thead>
     <tbody id="tableBody"></tbody>
-  </table>
+  </table> -->
+  <div class="cont2">
+    <button type="button" class="collapsible">View My Expenses</button>
+    <div class="content">
 
+
+      <table id="expenseTable" border="1">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Budget</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        } </script>
+
+    </div>
+
+  </div>
 
 </body>
 
