@@ -16,7 +16,7 @@
   <div class="budInput-group">
     <label class="placeholder">Your budget is: </label>
     <input type="number" class="budInput" id="bal" />
-    <input type="button" class="updateBtn" value="Update Balance" onclick="location.reload()" />
+    <input type="button" class="updateBtn" value="Update Balance" onclick="updateBalance()" />
   </div>
   <div class="cont1">
     <h4>Available Balance:</h4>
@@ -26,15 +26,19 @@
     <br />
 
     <form action="" id="form">
-      <div class="input-group">
-        <label class="placeholder">Budget</label>
-        <input type="number" class="input" placeholder="" id="bud" required />
-      </div>
 
       <div class="input-group">
-        <label class="placeholder">Description</label>
-        <input type="text" class="input" placeholder=" " id="des" />
+        <label class="placeholder">Item Type</label>
+        <select class="input" name="" id="sel" required>
+          <option selected>"Item Type"</option>
+          <option id="typ">Gas</option>
+          <option id="typ">Food</option>
+          <option id="typ">Education</option>
+          <option id="typ">Other</option>
+        </select>
+        <!-- <input type="number" class="input" placeholder="" id="bud" required /> -->
       </div>
+
 
       <div class="input-group">
         <label class="placeholder">Amount</label>
@@ -48,10 +52,15 @@
       </div>
 
       <div class="input-group">
+        <label class="placeholder">Description</label>
+        <input type="text" class="input" placeholder=" " id="des" />
+      </div>
+
+      <div class="input-group">
         <input type="hidden" name="" id="hidden" />
       </div>
 
-      <button type="submit" class="addBtn">Add</button>
+      <button id="add" type="submit" class="addBtn">Add</button>
       <button type="reset" class="resetBtn">Clear All</button>
     </form>
 
@@ -78,10 +87,10 @@
       <table id="expenseTable" border="1">
         <thead>
           <tr>
-            <th>Description</th>
+            <th>Type</th>
             <th>Amount</th>
             <th>Date</th>
-            <th>Budget</th>
+            <th>Description</th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>

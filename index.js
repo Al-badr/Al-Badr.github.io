@@ -8,24 +8,41 @@ if (JSON.parse(window.localStorage.getItem("expenseList")) !== null) {
   initialState = JSON.parse(window.localStorage.getItem("expenseList"));
 }
 
-function updateBalance() {}
+function updateBalance() {
+  // balance = document.getElementById("bal").value;
+  // localStorage.setItem("balance", balance);
+  // document.getElementById("balance").innerHTML = balance;
 
-function expense(desc, amt, date, bud) {
+  //console.log("Clear");
+  // expenseList = [];
+  //balance = 0;
+  //addToLocalStorage(expenseList);
+  // document.getElementById("tableBody").innerHTML = "";
+  //document.getElementById("mainPage").innerHTML = "";
+  //document.getElementById("balance").innerHTML = "";
+  location.reload();
+
+  //location.reload();
+}
+
+function expense(desc, amt, date, sel) {
   return (expenseObj = {
     description: desc,
     amount: amt,
     date,
-    budget: bud,
+    // budget: bud,
+    select: sel,
   });
 }
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  let budget = e.target.bud.value;
+  let select = e.target.sel.value;
+  //let budget = e.target.bud.value;
   let description = e.target.des.value;
   let amount = e.target.amt.value;
   let date = e.target.date.value;
-  let newExpense = new expense(description, amount, date, budget);
+  let newExpense = new expense(description, amount, date, select);
   expenseList.push(newExpense);
   console.log(expenseList);
   addToLocalStorage(expenseList);
@@ -40,7 +57,7 @@ form.addEventListener("reset", (e) => {
     balance = 0;
     addToLocalStorage(expenseList);
     document.getElementById("tableBody").innerHTML = "";
-    document.getElementById("mainPage").innerHTML = "";
+    //document.getElementById("mainPage").innerHTML = "";
     document.getElementById("balance").innerHTML = "";
     location.reload();
   }
@@ -73,15 +90,15 @@ form.addEventListener("reset", (e) => {
 function addExpenseToTable() {
   let tableBody = document.getElementById("tableBody");
   let newRow = tableBody.insertRow();
-  let descCell = newRow.insertCell(0);
+  let typCell = newRow.insertCell(0);
   let amtCell = newRow.insertCell(1);
   let dateCell = newRow.insertCell(2);
-  let budCell = newRow.insertCell(3);
+  let descCell = newRow.insertCell(3);
   for (let i = 0; i < expenseList.length; i++) {
     descCell.innerText = expenseList[i].description;
     amtCell.innerText = expenseList[i].amount;
     dateCell.innerText = expenseList[i].date;
-    budCell.innerText = expenseList[i].budget - expenseList[i].amount;
+    typCell.innerText = expenseList[i].select;
   }
 
   balance -= expenseList[expenseList.length - 1].amount;
