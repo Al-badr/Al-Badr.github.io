@@ -30,7 +30,7 @@
       <div class="input-group">
         <label class="placeholder">Item Type</label>
         <select class="input" name="" id="sel" required>
-          <option selected>"Item Type"</option>
+          <option selected disabled>Select An Item</option>
           <option id="typ">Gas</option>
           <option id="typ">Food</option>
           <option id="typ">Education</option>
@@ -41,12 +41,12 @@
 
 
       <div class="input-group">
-        <label class="placeholder">Amount</label>
+        <label class="placeholder">Price</label>
         <input type="number" class="input" placeholder=" " id="amt" required />
       </div>
 
       <div class="input-group">
-        <label class="placeholder">Date</label>
+        <label class="placeholder">Date Of Purchase</label>
         <input type="date" class="input" placeholder=" " id="date" required />
         <label class="placeholder"></label>
       </div>
@@ -59,9 +59,10 @@
       <div class="input-group">
         <input type="hidden" name="" id="hidden" />
       </div>
-
-      <button id="add" type="submit" class="addBtn">Add</button>
-      <button type="reset" class="resetBtn">Clear All</button>
+      <div class="btns">
+        <button id="add" type="submit" class="addBtn">Add</button>
+        <button type="reset" class="resetBtn">Clear All</button>
+      </div>
     </form>
 
   </div>
@@ -88,7 +89,7 @@
         <thead>
           <tr>
             <th>Type</th>
-            <th>Amount</th>
+            <th>Price</th>
             <th>Date</th>
             <th>Description</th>
           </tr>

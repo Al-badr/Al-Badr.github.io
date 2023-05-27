@@ -13,10 +13,10 @@ function updateBalance() {
   // localStorage.setItem("balance", balance);
   // document.getElementById("balance").innerHTML = balance;
 
-  //console.log("Clear");
-  // expenseList = [];
-  //balance = 0;
-  //addToLocalStorage(expenseList);
+  console.log("Clear");
+  expenseList = [];
+  balance = 0;
+  addToLocalStorage(expenseList);
   // document.getElementById("tableBody").innerHTML = "";
   //document.getElementById("mainPage").innerHTML = "";
   //document.getElementById("balance").innerHTML = "";
